@@ -1,25 +1,44 @@
 # Earth Online 🌍
 
-**Habit RPG Web App** — Complete daily missions → earn 任務幣 → buy weapons or lucky draw → fight growing monsters.
+**Habit RPG** — Complete daily missions → earn 任務幣 → Market / Lucky Draw → fight growing monsters.
 
-## How to play
-1. Open `index.html` in any browser (or just open this repo in Codespace and use Live Server / simple HTTP server).
-2. Complete the 5 fixed daily Missions (each gives 1 任務幣, once per day).
-3. Use 任務幣 in **Market** to buy fixed-damage consumables, or spend on **Lucky Draw**.
-4. Go to **打怪** and use your items to attack the monster.
-5. When the monster dies, it refreshes with higher HP and you gain Gold + Exp.
+## Current Stack (Modular)
+- **Vite** + **TypeScript**
+- ES Modules, fully modular structure
+- Pure frontend, localStorage persistence
+- Ready for future expansion (React / Flutter / Native App)
 
-## Features (MVP)
-- Fixed daily Missions (no user editing yet)
-- 任務幣 currency
-- Market with fixed-damage items
-- Lucky Draw (damage can be 0)
-- Growing monsters (HP × 1.3 after each kill)
-- Inventory, Gold, Exp, Level
-- LocalStorage persistence (progress stays in browser)
+## Project Structure
+```
+src/
+  data/          # static data (missions, shop, draw pool)
+  state/         # GameState + load/save
+  systems/       # business logic (mission, market, draw, battle)
+  ui/            # rendering
+  main.ts        # entry
+  style.css
+```
 
-## Tech
-Pure HTML + CSS + Vanilla JS. No backend, no build step.
+## How to run (in Codespace or local)
+```bash
+npm install
+npm run dev
+```
+Then open the local URL (usually http://localhost:5173).
+
+## Gameplay (MVP)
+- 5 fixed daily Missions → +1 任務幣 each (once per day)
+- Market: buy fixed-damage consumables
+- Lucky Draw: 3 coins, possible 0 dmg
+- Use items to attack monster
+- Monster grows HP × 1.3 after defeat + Gold/Exp reward
+
+## Future plans
+- Permanent equipment
+- New maps / more monsters
+- Special skills
+- Possibly Flutter / React Native for mobile App
+- Backend for multi-device sync
 
 ---
-Made for fun. More features (permanent equipment, maps, special skills) coming later.
+Made with modular design so we can easily evolve.
