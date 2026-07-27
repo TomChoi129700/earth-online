@@ -2,43 +2,48 @@
 
 **Habit RPG** — Complete daily missions → earn 任務幣 → Market / Lucky Draw → fight growing monsters.
 
-## Current Stack (Modular)
-- **Vite** + **TypeScript**
-- ES Modules, fully modular structure
-- Pure frontend, localStorage persistence
-- Ready for future expansion (React / Flutter / Native App)
+## 學習目標：全端開發（Full-stack）
 
-## Project Structure
+這個專案用來學習全端開發。
+每一個模塊都是一道題目，由你自己完成。
+
+### 技術棋
+
+| 層 | 技術 |
+|----|------|
+| 前端 | Vite + TypeScript（已模塊化） |
+| 後端 | Python + FastAPI（學習中） |
+| 資料庫 | 之後（SQLite → PostgreSQL） |
+
+### 資料夾結構
+
 ```
-src/
-  data/          # static data (missions, shop, draw pool)
-  state/         # GameState + load/save
-  systems/       # business logic (mission, market, draw, battle)
-  ui/            # rendering
-  main.ts        # entry
-  style.css
+earth-online/
+├─ frontend (src/)     ← 已完成的 Vite + TypeScript
+├─ backend/            ← Python 學習區（你要做的地方）
+│   ├─ main.py
+│   ├─ requirements.txt
+│   └─ README.md
+└─ README.md
 ```
 
-## How to run (in Codespace or local)
+### 如何開始學習
+
+1. 進入 `backend/` 資料夾
+2. 看 `backend/README.md`
+3. 從 **模塊 0** 開始
+
+每完成一題，同我講結果，我會檢查並出下一題。
+
+---
+
+## 前端如何運行
+
 ```bash
 npm install
 npm run dev
 ```
-Then open the local URL (usually http://localhost:5173).
 
-## Gameplay (MVP)
-- 5 fixed daily Missions → +1 任務幣 each (once per day)
-- Market: buy fixed-damage consumables
-- Lucky Draw: 3 coins, possible 0 dmg
-- Use items to attack monster
-- Monster grows HP × 1.3 after defeat + Gold/Exp reward
+## 後端學習請看
 
-## Future plans
-- Permanent equipment
-- New maps / more monsters
-- Special skills
-- Possibly Flutter / React Native for mobile App
-- Backend for multi-device sync
-
----
-Made with modular design so we can easily evolve.
+進入 `backend/` 資料夾開始。
