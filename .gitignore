@@ -1,0 +1,37 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables (重要！防止洩漏密鑰)
+.env
+.env.local
+*.env
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (frontend)
+node_modules/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local database (之後如果用 SQLite)
+*.db
+*.sqlite3
